@@ -12,31 +12,31 @@ Frontend automation testing tool for web apps
 **Why Cypress**:
 It address key pain points devs and QA face when testing apps
 
-####Features
-    - Automatic Waiting 
-        > handles syncing(implicit/explicit waiting) automatically
-    - Debuggability
-        > errors & stack traces available in browser where tests are running
-    - Supports multiple types of testing
-        > - e2e
-        > - component
-        > - integration
-        > - unit
+#### Features
+- Automatic Waiting 
+    > handles syncing(implicit/explicit waiting) automatically
+- Debuggability
+    > errors & stack traces available in browser where tests are running
+- Supports multiple types of testing
+    > - e2e
+    > - component
+    > - integration
+    > - unit
 
-    - Time travel
-        > takes series of screenshots and video
+- Time travel
+    > takes series of screenshots and video
         
-    - Network Traffic Control
-        > allows for stubbing and avoiding need for certain connections(server)
+- Network Traffic Control
+    > allows for stubbing and avoiding need for certain connections(server)
 
-    - Smart Orchestration
-        > Cloud platform that allows for 
-        > - Parallelize test suites
-        > - rerun failed test cases
-        > - autocancel execution on failure
+- Smart Orchestration
+    > Cloud platform that allows for 
+    > - Parallelize test suites
+    > - rerun failed test cases
+    > - autocancel execution on failure
 
-    - Flake detection
-        > helps discover unreliable tests
+- Flake detection
+    > helps discover unreliable tests
 
     [Full list](https://docs.cypress.io/guides/overview/why-cypress)
 
