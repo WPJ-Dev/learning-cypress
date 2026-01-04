@@ -47,6 +47,8 @@ It address key pain points devs and QA face when testing apps
 
     Cypress works on node.js invoking tested browser loading tess and app in seperate iframes
 
+---
+
 <table>
     <tr>
         <th>Pros:</th>
@@ -78,3 +80,5 @@ It address key pain points devs and QA face when testing apps
         <td></td>
     </tr>
 </table>
+
+---
