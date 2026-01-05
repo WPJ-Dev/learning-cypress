@@ -93,3 +93,13 @@ It address key pain points devs and QA face when testing apps
  2. Your favorite IDE
  3. [Cypress App](https://www.cypress.io/app#browser_testing)
     > npm install cypress --save-dev
+
+**Running**
+- Launch Cypress test runner via open command in cypress node modules directory
+    > `./node_modules/.bin/cypress open`
+    > or
+    > `npx cypress open`
+
+- Offers e2e or component testing and will add associated files to project
+- Select browser and choose between scaffolded specs or creating specs
+- Specs are where we create tests

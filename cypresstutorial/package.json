@@ -1,0 +1,26 @@
+{
+  "name": "cypresstutorial",
+  "version": "1.0.0",
+  "description": "learning-cypress",
+  "keywords": [
+    "cypress"
+  ],
+  "homepage": "https://github.com/WPJ-Dev/learning-cypress#readme",
+  "bugs": {
+    "url": "https://github.com/WPJ-Dev/learning-cypress/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WPJ-Dev/learning-cypress.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "cypress": "^15.8.1"
+  }
+}
