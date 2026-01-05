@@ -1,4 +1,4 @@
-##Introduction
+## Introduction
 
 ---
 
@@ -82,3 +82,14 @@ It address key pain points devs and QA face when testing apps
 </table>
 
 ---
+
+## Tools and Installation
+
+---
+
+**Requirements**
+
+ 1. [Node.js](https://nodejs.org/en/download)
+ 2. Your favorite IDE
+ 3. [Cypress App](https://www.cypress.io/app#browser_testing)
+    > npm install cypress --save-dev
