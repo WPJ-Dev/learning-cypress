@@ -97,9 +97,39 @@ It address key pain points devs and QA face when testing apps
 **Running**
 - Launch Cypress test runner via open command in cypress node modules directory
     > `./node_modules/.bin/cypress open`
-    > or
+
+    or
+
     > `npx cypress open`
 
 - Offers e2e or component testing and will add associated files to project
 - Select browser and choose between scaffolded specs or creating specs
-- Specs are where we create tests
+- Specs are where tests are create
+
+---
+
+**Folder/File Structure**
+
+1. Fixtures
+    - Test data storage
+
+2. E2E
+    - Automation code/test cases
+
+3. Support
+    - Reusable scripts
+
+4. Screenshots
+    - Failed test screenshots
+
+5. Videos
+    - Automation execution videos
+
+6. Download
+    - Files downloaded during tests
+
+7. Cypress.json
+    - Cypress configuation
+
+8. Package.json & Package.lock.json
+    - Npm configuration
