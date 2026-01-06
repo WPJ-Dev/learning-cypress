@@ -133,3 +133,130 @@ It address key pain points devs and QA face when testing apps
 
 8. Package.json & Package.lock.json
     - Npm configuration
+
+---
+
+**First Test**
+
+Describe()/Context() => Test Suite => Mocha 
+it()/Specify() => test case => Mocha
+expect() => Verification => Chai 
+
+*Phases*
+
+Behavior-driven development
+
+1. Setup the application state => Given / Arrange
+
+2. Take an action => When / Act
+
+3. Verification => Then / Assert
+
+---
+
+**Running Tests with Commands**
+
+Automation testing should run and be integrated with CI(Continuous Integration)/CD(Continuous Deployment) 
+
+Examples:
+1. Jenkins
+2. Bamboo
+3. Team City
+
+Commands:
+Executed from cypress folder(ex. ./node_modules/.bin/cypress) or via npx
+> run 
+
+- runs all tests
+> --headed
+
+- launches browser instance
+
+> --browser
+
+- selects browser to utilize (chorme/firefox/)edge
+
+> --spec "\<filepath>"
+
+- specific spec file(s) to run
+
+---
+
+**Intellisense**
+
+Get intellisense suggestions if not working
+
+Can place
+```ts 
+/// <reference types="Cypress" />
+```
+
+at the top of each file needed
+
+or
+
+Create an index.d.ts under support folder with
+```ts
+declare namespace Cypress {
+   interface Chainable<Subject> {       
+        /**         
+        * Log in via UI
+        * @example
+        * cy.login(username: string, password: string)
+        */
+        login(): Chainable<any>
+
+        /**
+        * Log in via API
+        * @example
+        * cy.apiLogin()
+        */
+        apiLogin(): Chainable<any>
+ 
+        /**
+        * Wait for view to load
+        * @example
+        *  cy.waitForFirstLoad()
+        */
+        waitForFirstLoad(): Chainable<any>
+        
+        /** 
+        * Log out
+        * @example
+        *  cy.logout()
+        */
+        logout(): Chainable<any>
+    } 
+}
+```
+
+Create tsconfig.json file under cypress folder with
+```ts
+{
+    "compilerOptions": {
+        "allowJS": true,
+        "baseUrl": "../node_modules",
+        "noEmit": true,
+        "types": [
+            "cypress"
+        ]
+    },
+    "include": [
+        "**/*.*"
+    ]
+}
+```
+
+---
+
+**Locator Strategy & Selector Playground**
+
+Locators are identifiers of web elements
+
+*cypress only natively support css & jquery selectors
+*cypress-xpath plugin allows for xpath selector support
+
+
+
+
+
