@@ -256,6 +256,60 @@ Locators are identifiers of web elements
 *cypress only natively support css & jquery selectors
 *cypress-xpath plugin allows for xpath selector support
 
+***cypress-xpath plugin deprecated and not finding any current functionality***
+
+
+#### Locators
+
+get()
+
+Examples:
+
+```js
+    describe('Get Method And CSS Examples', () => {
+        it('should learn get() method and some CSS examples', () => {
+            cy.visit('https://www.letskodeit.com/practice')
+
+            // Tag Name
+            cy.get('button')
+
+            // Id
+            cy.get('#name')
+
+            // Class Name
+            cy.get('.inputs')
+
+            // Attribute Value
+            cy.get('[placeholder="Enter Your Name"]')
+            
+            // Class Value
+            cy.get('[class="inputs displayed-class"]')
+            
+            // Tag Name and Attribute Value
+            cy.get('input[id="name"]:visible')
+
+            // Tag Name and Multiple Attribute Value
+            cy.get('input[id="name"][placeholder="Enter Your Name"]')
+
+            //Should attr / invoke alternative
+        })
+    })
+```
+
+cy.get(locator, options)
+
+Option -> Default Value -> Description
+
+log -> true -> Enable/Disable command output on the console
+
+timeout -> defaultTimeout -> Time to wait before throwing an exception
+
+withinSubject -> null -> Specifies the node from where the element search should start
+
+---
+
+
+
 
 
 
