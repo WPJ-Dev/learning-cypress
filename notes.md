@@ -298,11 +298,11 @@ Examples:
 
 cy.get(locator, options)
 
-|Option  |-> Default Value  |  -> Description|
+|Option|-> Default Value|-> Description|
 |------|------|------|
-|log|-> true             |-> Enable/Disable command output on the console|
-|timeout |-> defaultTimeout   |-> Time to wait before throwing an exception|
-|withinSubject |-> null |-> Specifies the node from where the element search should start|
+|log|-> true|-> Enable/Disable command output on the console|
+|timeout|-> defaultTimeout|-> Time to wait before throwing an exception|
+|withinSubject|-> null|-> Specifies the node from where the element search should start|
 
 ---
 
@@ -331,9 +331,37 @@ cy.get('#open-window-example-div').find('button', {log: false})
 cy.get('#open-window-example-div').find('button', {timeout: 12000})
 ```
 
+---
+
+## A/Synchronous Nature
 
 
 
+**Promise Handling**
 
+- Pending: When execution starts but hasn't finished
+- Rejection: Any execution failures
+- Resolved: Upon successful execution
 
+```js
+cy.get('#name').then(() => {
+    console.log('JS command')
+})
+```
 
+---
+
+## Assertions
+
+Assertions validate the state of elements or any action we performed on the application we are testing. They can verify whether the element is visible or has a particualr state.
+
+1. Implicit assertion are used on the object provided by the parent command.
+    - should() & and() commands act on the subject returned by the previous command
+    - When should we use?
+        1. Assert multiple validations on the same element/subject.
+        2. Change the subject before making assertions.
+
+2. Explicit
+    - expect() and assert()
+    - When should we use?
+        1. Perform some custom logic before making an assertion
