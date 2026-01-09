@@ -261,7 +261,7 @@ Locators are identifiers of web elements
 
 #### Locators
 
-get()
+- get()
 
 Examples:
 
@@ -298,15 +298,38 @@ Examples:
 
 cy.get(locator, options)
 
-Option -> Default Value -> Description
-
-log -> true -> Enable/Disable command output on the console
-
-timeout -> defaultTimeout -> Time to wait before throwing an exception
-
-withinSubject -> null -> Specifies the node from where the element search should start
+|Option  |-> Default Value  |  -> Description|
+|------|------|------|
+|log|-> true             |-> Enable/Disable command output on the console|
+|timeout |-> defaultTimeout   |-> Time to wait before throwing an exception|
+|withinSubject |-> null |-> Specifies the node from where the element search should start|
 
 ---
+
+- .within()
+
+yields the same subject which was given to it from the previous command
+
+```js
+cy.get('#open-window-example-div').within(() => {
+    cy.get('button')
+})
+```
+
+---
+
+- .find()
+
+returns one or more elements based on the selector/locator
+can be chained with other commands returning an element
+
+```js
+cy.get('#open-window-example-div').find('button').should('have.id', 'openwindow').click()
+
+cy.get('#open-window-example-div').find('button', {log: false})
+
+cy.get('#open-window-example-div').find('button', {timeout: 12000})
+```
 
 
 
