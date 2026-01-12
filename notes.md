@@ -365,3 +365,50 @@ Assertions validate the state of elements or any action we performed on the appl
     - expect() and assert()
     - When should we use?
         1. Perform some custom logic before making an assertion
+
+---
+
+**Web UI Interactions**
+
+#### Click Method
+
+*Syntax*:
+
+1. => .click()
+2. => .click(options)
+3. => .click(position)
+4. => .click(position, options)
+5. => .click(x, y)
+6. => .click(x, y, options)
+
+*Positions*: the possible options are:
+
+- center (Default)
+- topLeft
+- top
+- topRight
+- left
+- right
+- bottomLeft
+- bottom
+- bottomRight
+
+
+
+*Cooridnates*:
+ - x => The distans in pixels from the element's left to issue the click
+ - y => The distance in pixels from the element's top to issue the click
+
+*Options*:
+
+|Option| -> Default Value| -> Description|
+|------|------|------|
+|log| -> true| -> Enable/Disable command output on the console|
+|timeout| -> defaultTimeout| -> Time to wait before throwing an exception|
+|force|-> false| -> Forces the action, disables waiting element to become actionable|
+|multiple|-> false| -> Serially click multiple elements|
+|scrollBehavior| -> None| -> Viewport position to where an element should be scrolled before executing the command ('center', 'top', 'bottom', 'nearest', or false)
+|altKey|-> false| -> Activates the alt key (option key for Max)|
+|ctrlKey| -> false| -> Activates the control key|
+|metaKey|-> false| -> Activates the meta key (Windows key or command key for Mac)|
+|shiftKey|-> false| -> Activates the shift key|
