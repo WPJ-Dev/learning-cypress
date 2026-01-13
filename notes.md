@@ -405,10 +405,144 @@ Assertions validate the state of elements or any action we performed on the appl
 |------|------|------|
 |log| -> true| -> Enable/Disable command output on the console|
 |timeout| -> defaultTimeout| -> Time to wait before throwing an exception|
-|force|-> false| -> Forces the action, disables waiting element to become actionable|
+|force|-> false| -> Forces the action, disables waiting for element to become actionable|
 |multiple|-> false| -> Serially click multiple elements|
 |scrollBehavior| -> None| -> Viewport position to where an element should be scrolled before executing the command ('center', 'top', 'bottom', 'nearest', or false)
 |altKey|-> false| -> Activates the alt key (option key for Max)|
 |ctrlKey| -> false| -> Activates the control key|
 |metaKey|-> false| -> Activates the meta key (Windows key or command key for Mac)|
 |shiftKey|-> false| -> Activates the shift key|
+
+---
+
+#### Double Click Method
+
+*Syntax*:
+
+1. => .dblclick()
+2. => .dblclick(options)
+3. => .dblclick(position)
+4. => .dblclick(position, options)
+5. => .dblclick(x, y)
+6. => .dblclick(x, y, options)
+
+---
+
+#### Right Click Method
+
+*Syntax*:
+
+1. => .rightclick()
+2. => .rightclick(options)
+3. => .rightclick(position)
+4. => .rightclick(position, options)
+5. => .rightclick(x, y)
+6. => .rightclick(x, y, options)
+
+---
+
+#### Type Method
+
+*Syntax*:
+1. -> .type(text)
+2. -> .type(text, options)
+
+*Options*:
+
+|Option| -> Default Value| -> Description|
+|------|------|------|
+|log| -> true| -> Enable/Disable command output on the console|
+|timeout| -> defaultTimeout| -> Time to wait before throwing an exception|
+|force|-> false| -> Forces the action, disables waiting for element to become actionable|
+|delay| -> 10| -> Delay in milliseconds after each keypress|
+|parseSpecialCharSequences| -> true| -> Parse special characters for strings surrounded by {}, such as {esc}. Set false to typ the literal|
+
+---
+
+#### Clear Method
+
+*Syntax*:
+1. -> .clear()
+2. -> .clear(options)
+
+*Options*:
+
+|Option| -> Default Value| -> Description|
+|------|------|------|
+|log| -> true| -> Enable/Disable command output on the console|
+|timeout| -> defaultTimeout| -> Time to wait before throwing an exception|
+|force|-> false| -> Forces the action, disables waiting for element to become actionable|
+
+---
+
+### Check/Uncheck Methods
+
+*Syntax*:
+1. -> check()
+2. -> check(value)
+3. -> check(values)
+4. -> check(value, options)
+5. -> check(values, options)
+
+1. -> uncheck()
+2. -> uncheck(value)
+3. -> uncheck(values)
+4. -> uncheck(value, options)
+5. -> uncheck(values, options)
+
+*Options*:
+
+|Option| -> Default Value| -> Description|
+|------|------|------|
+|log| -> true| -> Enable/Disable command output on the console|
+|timeout| -> defaultTimeout| -> Time to wait before throwing an exception|
+|force|-> false| -> Forces the action, disables waiting for element to become actionable|
+
+---
+
+### Select Method
+
+*Syntax*:
+1. -> .select(value)
+2. -> .select(values)
+3. -> .select(value, options)
+4. -> .select(values, options)
+
+Value -> One value to be selected
+
+Values -> Multiple values to be selected
+
+*Options*:
+
+|Option| -> Default Value| -> Description|
+|------|------|------|
+|log| -> true| -> Enable/Disable command output on the console|
+|timeout| -> defaultTimeout| -> Time to wait before throwing an exception|
+|force|-> false| -> Forces the action, disables waiting for element to become actionable|
+
+---
+
+### Trigger Method
+
+*Syntax*:
+1. -> .trigger(eventName)
+2. -> .trigger(eventName, position)
+3. -> .trigger(eventName, options)
+4. -> .trigger(eventName, x, y)
+5. -> .trigger(eventName, position, options)
+6. -> .trigger(eventName, x, y, options)
+
+*Options*:
+
+|Option| -> Default Value| -> Description|
+|------|------|------|
+|log| -> true| -> Enable/Disable command output on the console|
+|timeout| -> defaultTimeout| -> Time to wait before throwing an exception|
+|force|-> false| -> Forces the action, disables waiting for element to become actionable|
+
+Some mouse event examples:
+- mouseover
+- mousedown(does not work when CSS implementation)
+- mouseup
+- click
+
