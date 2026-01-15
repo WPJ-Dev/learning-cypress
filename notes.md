@@ -550,7 +550,7 @@ Some mouse event examples:
 
 **Working with Element Lists**
 
-### Element LIst Iteration
+### Element List Iteration
 
 each command -> For Loop
 
@@ -560,3 +560,23 @@ How to freeze webpage for element inspection:
 ```js
 setTimeout(function() {debugger;}, 6000)
 ```
+
+---
+
+**Working with Windows-Tabs-Popups-Frames**
+
+### Windows
+
+*Cypress works in a single window and does not encourage using new tabs or windows
+
+### JS Alerts and Confirm Popups
+
+JS Alerts -> It is not possible to inspect elements as they are not HTML pop-ups
+Cypress handles clicking Ok button for JS Alert and Confirm popups
+
+### IFrames
+
+1. Iframe is an html document embedded in another html document
+2. Look at the console tab to find iframe info
+3. First find the iframe element
+4. Then work within the callback function
