@@ -8,7 +8,8 @@ describe('Trigger Demo', () => {
         // cy.get("div.mouse-hover-content a[href='#top']").click()
 
         // eBay Mouseover
-        // cy.visit('https://www.ebay.com')
+        cy.visit('https://www.ebay.com')
+        cy.get('#s0-1-4-8-13-0-dialog').find('div').find('ul').invoke('show')
         
     })
 })

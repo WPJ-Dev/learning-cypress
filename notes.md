@@ -546,3 +546,17 @@ Some mouse event examples:
 - mouseup
 - click
 
+---
+
+**Working with Element Lists**
+
+### Element LIst Iteration
+
+each command -> For Loop
+
+wrap command -> Wrap JQuery eleemnts into Cypress Objects
+
+How to freeze webpage for element inspection:
+```js
+setTimeout(function() {debugger;}, 6000)
+```
