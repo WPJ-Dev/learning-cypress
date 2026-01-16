@@ -580,3 +580,58 @@ Cypress handles clicking Ok button for JS Alert and Confirm popups
 2. Look at the console tab to find iframe info
 3. First find the iframe element
 4. Then work within the callback function
+
+---
+
+**Framework Preparation**
+
+### Hooks Explained
+
+Hooks allow for actions completed before or after testing.
+
+Provided by moka
+
+Similar to Selenium annotations
+
+```js
+// before() Hook
+    // It runs before starting the first test, 
+    before('Optional text',() => {
+        cy.log('Before all tests')
+    })
+
+    // after() Hook
+    // It runs only once after completing all tests
+    after('Optional text',() => {
+        cy.log('After all tests')
+    })
+
+    // beforeEach() 
+    // Runs before each test
+    beforeEach('Optional text',() => {
+        cy.log('Before each tests')
+    })
+
+    // afterEach() 
+    // Runs after each test
+    afterEach('Optional text',() => {
+        cy.log('after each tests')
+    })
+```
+
+---
+
+### Include/Exclude tests
+
+Individual tests can be skipped
+```js
+it.skip('Test 1', () => {
+        cy.log('Test 1')
+    })
+```
+Can select an individual tests to be run
+```js
+it.only('Test 1', () => {
+        cy.log('Test 1')
+    })
+```
