@@ -635,3 +635,56 @@ it.only('Test 1', () => {
         cy.log('Test 1')
     })
 ```
+
+### Fixtures
+
+Allows for a seperation of test data from test specs.
+
+Data structures can be mocked with multiple encodings and file extensions.
+
+Example:
+
+> Test Spec:
+>```js
+>let globalData;
+>
+>it('before hook', () => {
+>        cy.fixture("example").then((data) => {
+>            globalData = data.testId2
+>        })
+>    })
+>```
+>
+>fixtures/example.json
+>```json
+>{
+>  "testId1":
+>  {
+>   "name": "Using fixtures to represent data",
+>   "email": "hello@cypress.io",
+>   "body": "Fixtures are a great way to mock data for responses to routes"
+>  },
+>  "testId2":
+>  {
+>    "username": "Test Username",
+>    "password": "Test Password"
+>  }
+>}
+>
+>```
+
+### Looping Tests/Data
+
+You can run tests looping through data to test different data sets
+
+```js
+it('should run same test with multiple data', () => {
+        globalData.forEach(testData => {
+            cy.visit('https://www.letskodeit.com/courses')
+            cy.get('input[placeholder="Search Course"]').type(testData.search_course)
+            cy.get('button[class="find-course search-course"]').click()
+            cy.get('h4[class="dynamic-heading"]').contains(testData.click_course).click()
+            
+        });
+    })
+```
