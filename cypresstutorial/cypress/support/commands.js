@@ -37,6 +37,12 @@ Cypress.Commands.add('login', (email, password) => {
     cy.get('#dropdownMenu1').should('exist')
 })
 
+Cypress.Commands.add('logout', (email, password) => {
+    cy.get('#dropdownMenu1').click()
+    cy.contains('Logout').click()
+    cy.get('a[href="/login"]').should('have.text', 'Sign In')
+})
+
 Cypress.Commands.add('searchCourse', (category, courseString) => {
     cy.get('select[name="categories"]').select(category)
     cy.get('input[placeholder="Search Course"]').type(courseString)

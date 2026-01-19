@@ -688,3 +688,50 @@ it('should run same test with multiple data', () => {
         });
     })
 ```
+
+---
+
+### Custom Commands
+
+Custom commands can be created in *support/commands.js* and used throughout specs
+1. Limit custom commands to needs
+2. Limit functionality
+```js
+it('should use custom command to login', () => {
+        cy.visit('https://www.letskodeit.com/login')
+        cy.login('test@email.com', 'abcabc')
+    })
+```
+commands.js:
+```js
+Cypress.Commands.add('login', (email, password) => {
+    cy.get('#email').type(email);
+    cy.get('#login-password').type(password)
+    cy.get('#login').click()
+    cy.get('#dropdownMenu1').should('exist')
+})
+```
+
+*Intellisense functionality can be added through index.d.ts
+
+---
+
+**Frameworks**
+
+##### What is a framework?
+
+A common Standard of doing things
+- Easy to maintain and read
+- Data Driven Tests
+- Provides Meaningful Reporting
+- Standard and Consistent Coding
+- Encapsulation of UI interactions
+- Maximize Code Re-Usability
+
+##### What is a page object model?
+
+A design pattern widely used to enhance test maintenance and reducing code duplications
+
+- Wraps an HTML page with APIs that allow us to work with page elements.
+- Should provide an easy to program interface
+- Should encapsulate the code used to find and manipulate the page elements and data
