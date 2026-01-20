@@ -25,7 +25,7 @@ export class LoginPage {
     }
 
     verifyInvalidCredentialsError() {
-        cy.get('#incorrectdetails').should('have.text', 'Incorrect login details. Please try again.')
+        cy.get('#incorrectdetails').should('have.text', 'iIncorrect login details. Please try again.')
     }
 
     loginToApp(email, password) {
