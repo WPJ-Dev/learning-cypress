@@ -735,3 +735,26 @@ A design pattern widely used to enhance test maintenance and reducing code dupli
 - Wraps an HTML page with APIs that allow us to work with page elements.
 - Should provide an easy to program interface
 - Should encapsulate the code used to find and manipulate the page elements and data
+
+---
+
+**Reporting and Cloud Dashboard**
+
+### Test Execution Screenshots and Videos
+
+Screenshots of test failures and videos are automatically taken during spec executions via cli, but not when run via the GUI
+- can be manually taken with ```cy.screenshot() ```
+
+### Retry test cases
+
+Retries by default are set to 0 and can be set in general or individually for cli vs gui runs. Only applies to test cases, not hooks.
+
+### Awesome Reports Generation
+
+Multiple plugins exist for report generation
+
+Mocha Awesome Reports
+
+---
+
+### Cloud Dashboard
