@@ -758,3 +758,39 @@ Mocha Awesome Reports
 ---
 
 ### Cloud Dashboard
+
+- Allows for an easy platform to run/record tests and share them with team members.
+- Can reduce test runtime by providing parallelization
+- Receive analytics on test runs.
+- Helps validate projects code quality improvements.
+
+---
+
+**Advandced Features**
+
+### Environment Variables
+
+Can pass via cli 
+
+```--env username=test@email.com,password=abcabc```
+
+Paired with open cmd, can load environment specific instances
+
+Additionally can run with modified env variables.
+```--env username=$APP_USERNAME,password=$APP_PASSWORD```
+
+cypress.config.js
+```js
+e2e: {
+    baseUrl: 'https://www.letskodeit.com',
+    setupNodeEvents(on, config) {
+      const username = process.env.APP_USERNAME
+      const password = process.env.APP_PASSWORD
+
+      config.env = {username, password}
+      return config
+    },
+  },
+```
+
+### Experimental Features - Safari Webkit
