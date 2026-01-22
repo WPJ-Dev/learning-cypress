@@ -29,8 +29,6 @@ describe('API Testing Demo', () => {
         }).then((res) => {
             expect(res.status).to.eq(201)
             const userId = res.body.id;
-            return userId;
-        }).then((userId) => {
             cy.request({
                 method: 'GET',
                 url: apiURL + '/' + userId,
