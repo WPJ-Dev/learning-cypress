@@ -2,7 +2,11 @@
     "tid1": {
         "name": "Somne Jones",
         "gender": "male",
-        "email": "somne.jones03@email.com",
+        "status": "active"
+    },
+    "tid2": {
+        "name": "Somne Jones - Updated",
+        "gender": "male",
         "status": "active"
     }
 }

@@ -3,7 +3,7 @@ import { util } from "../../support/utilities";
 describe('API Testing Demo', () => {
 
     let apiURL = 'https://gorest.co.in/public/v2/users';
-    let accessToken = '';
+    let accessToken = Cypress.env('GO_REST_API_KEY');
     let gd;
     before('', () => {
         cy.fixture('users_data'). then((data) => {

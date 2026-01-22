@@ -24,7 +24,6 @@ describe('API Testing Demo', () => {
                 status: "active"
             }
         }).then((res) => {
-            console.log(res)
             cy.log(JSON.stringify(res))
             expect(res.status).to.be.eq(201)
             expect(res.body.name).to.be.eq("Somne Jones")
@@ -46,11 +45,10 @@ describe('API Testing Demo', () => {
             method: 'POST',
             url: 'https://gorest.co.in/public/v2/users',
             headers: {
-                authorization: ''
+                authorization: Cypress.env('GO_REST_API_KEY')
             },
             body: reqBody
         }).then((res) => {
-            console.log(res)
             cy.log(JSON.stringify(res))
             expect(res.status).to.be.eq(201)
             expect(res.body.name).to.be.eq("Somne Jones")
@@ -72,11 +70,10 @@ describe('API Testing Demo', () => {
             method: 'POST',
             url: 'https://gorest.co.in/public/v2/users',
             headers: {
-                authorization: ''
+                authorization: Cypress.env('GO_REST_API_KEY')
             },
             body: reqBody
         }).then((res) => {
-            console.log(res)
             cy.log(JSON.stringify(res))
             expect(res.status).to.be.eq(201)
             expect(res.body.name).to.be.eq("Somne Jones")
@@ -98,11 +95,14 @@ describe('API Testing Demo', () => {
             method: 'POST',
             url: 'https://gorest.co.in/public/v2/users',
             headers: {
+<<<<<<< HEAD
                 authorization: ''
+=======
+                authorization: Cypress.env('GO_REST_API_KEY')
+>>>>>>> 6f9e016 (delete validation - should try get?)
             },
             body: reqBody
         }).then((res) => {
-            console.log(res)
             cy.log(JSON.stringify(res))
             expect(res.status).to.be.eq(201)
             expect(res.body.name).to.be.eq(reqBody.name)

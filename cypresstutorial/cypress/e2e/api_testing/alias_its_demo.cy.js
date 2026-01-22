@@ -30,7 +30,6 @@ describe('Alias and Get Command - API Testing Demo', () => {
 
     it('should use alias and get command to verify api testing', () => {
         cy.get('@users').then((res) => {
-            console.log(res)
             cy.log(JSON.stringify(res))
             expect(res.status).to.be.eq(200)
             expect(res.body).has.length(10)
