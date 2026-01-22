@@ -751,7 +751,7 @@ Retries by default are set to 0 and can be set in general or individually for cl
 
 ### Awesome Reports Generation
 
-Multiple plugins exist for report generation
+Multiple plugins exist for report generation.
 
 Mocha Awesome Reports
 
@@ -794,3 +794,10 @@ e2e: {
 ```
 
 ### Experimental Features - Safari Webkit
+
+Cypress currently has an experimental feature for webkit support
+
+Check Cypress docs for updated information on running.
+
+---
+---
