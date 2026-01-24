@@ -801,3 +801,28 @@ Check Cypress docs for updated information on running.
 
 ---
 ---
+
+**Cypress API Automation**
+
+For utilization of REST requests `cy.request(method, url, body)` or `cy.request(options)` is utilized with the url being required and the options object able to contain the previous signature's parameters and others ex: _headers_.
+
+### Alias
+
+Requests can be aliased to facilite reusability
+```js
+beforeEach('Initiate the main URL', () => {
+        cy.request({
+            method: 'GET',
+            url: 'https://gorest.co.in/public/v2/users',
+            headers: {
+                authorization: ''
+            }
+        }).as('users')
+    })
+
+    it('should use alias to validate headers', () => {
+        cy.get('@users').its('headers')
+            .its('content-type')
+            .should('include', 'application/json; charset=utf-8')
+    })
+```
