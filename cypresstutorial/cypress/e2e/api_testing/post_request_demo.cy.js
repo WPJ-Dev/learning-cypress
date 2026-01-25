@@ -13,7 +13,7 @@ describe('API Testing Demo', () => {
     it.skip('should validate post request', () => {
         cy.request({
             method: 'POST',
-            url: 'https://gorest.co.in/public/v2/users',
+            url: Cypress.env('apiURL'),
             headers: {
                 authorization: ''
             },
@@ -43,7 +43,7 @@ describe('API Testing Demo', () => {
 
         cy.request({
             method: 'POST',
-            url: 'https://gorest.co.in/public/v2/users',
+            url: Cypress.env('apiURL'),
             headers: {
                 authorization: Cypress.env('GO_REST_API_KEY')
             },
@@ -68,7 +68,7 @@ describe('API Testing Demo', () => {
 
         cy.request({
             method: 'POST',
-            url: 'https://gorest.co.in/public/v2/users',
+            url: Cypress.env('apiURL'),
             headers: {
                 authorization: Cypress.env('GO_REST_API_KEY')
             },
@@ -93,7 +93,7 @@ describe('API Testing Demo', () => {
 
         cy.request({
             method: 'POST',
-            url: 'https://gorest.co.in/public/v2/users',
+            url: Cypress.env('apiURL'),
             headers: {
 <<<<<<< HEAD
                 authorization: ''

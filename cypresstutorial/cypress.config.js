@@ -4,7 +4,10 @@ module.exports = defineConfig({
   defaultCommandTimeout: 6000,
   env: {
     username: 'test@email.com',
-    password: 'abcabc'
+    password: 'abcabc',
+    url: 'https://www.letskodeit.com',
+    qaURL: '',
+    apiURL: 'https://gorest.co.in/public/v2/users'
   },
   reporter: "cypress-mochawesome-reporter",
   retries: 1,

@@ -2,7 +2,7 @@ describe('API Testing Demo', () => {
     it('should validate get request', () => {
         cy.request({
             method: 'GET',
-            url: 'https://gorest.co.in/public/v2/users',
+            url: Cypress.env('apiURL'),
             headers: {
                 authorization: ''
             }

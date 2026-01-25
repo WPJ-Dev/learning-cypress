@@ -3,7 +3,7 @@ describe('Alias and Get Command - API Testing Demo', () => {
     beforeEach('Initiate the main URL', () => {
         cy.request({
             method: 'GET',
-            url: 'https://gorest.co.in/public/v2/users',
+            url: Cypress.env('apiURL'),
             headers: {
                 authorization: ''
             }

@@ -2,15 +2,13 @@ import { util } from "../../support/utilities";
 
 describe('API PUT/DELETE Testing Demo', () => {
 
-    let apiURL = 'https://gorest.co.in/public/v2/users';
-    let accessToken = '';
+    let apiURL = Cypress.env('apiURL');
+    let accessToken = Cypress.env('GO_REST_API_KEY');
     let userId;
     let gd;
     before('', () => {
         cy.fixture('users_data').then((data) => {
             gd = data;
-        }).then(() => {
-
         
             const userEmail = util.random_email();
             const reqBody = {
@@ -32,8 +30,6 @@ describe('API PUT/DELETE Testing Demo', () => {
                 userId = res.body.id;
             })
         })
-
-
     })
     
     it('should validate put', () => {
