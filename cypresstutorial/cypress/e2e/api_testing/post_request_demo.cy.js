@@ -95,11 +95,7 @@ describe('API Testing Demo', () => {
             method: 'POST',
             url: Cypress.env('apiURL'),
             headers: {
-<<<<<<< HEAD
-                authorization: ''
-=======
                 authorization: Cypress.env('GO_REST_API_KEY')
->>>>>>> 6f9e016 (delete validation - should try get?)
             },
             body: reqBody
         }).then((res) => {
