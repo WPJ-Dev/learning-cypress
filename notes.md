@@ -826,3 +826,82 @@ beforeEach('Initiate the main URL', () => {
             .should('include', 'application/json; charset=utf-8')
     })
 ```
+
+### Chaining
+
+---
+
+### Working with OAuth 
+
+
+---
+---
+**Continuous Integreation with Jenkins**
+
+Jenkins provides continuous integration functionality, which pushes updated/checked-in code to appropriate environments.
+
+- Open source CI tool
+- Provides continuous builds with Maven or Gradle
+- Run a shell script
+- Continuous deployments
+- Continuous testing
+- Archive build results
+
+Installing via war > navigate to containing folder > `java -jar jenkins.war --httpPort=8081` 8080 is default port.
+
+### Securing Jenkins
+
+Can create limited users via 'Configure Global Security'
+
+### Plugin Management
+
+'Manage Plugins'
+
+### Build a Remote Proj using Git and Jenkins
+
+Create a job/New item 
+Select Git as source code management
+Add credentials
+Select correct branch
+Add appropriate params
+Set build steps
+
+**CSS Selectors - Advanced Locators**
+
+tag[attribure='value']
+
+"#" -> Id
+"." -> Class
+
+### Using Ids with CSS selectors to find elements
+
+Element Displayed Example Text Box:
+- input[id=displayed-text]
+- #displayed-text
+- input#displayed-text
+
+### Using Classes with CSS selectors to find elements
+
+- input[class=displayed-class]
+- .displayed-class
+- input.displayed-class
+
+Appending Classes
+- .class1.class2.class3
+
+### Using wildcars with CSS selectors
+
+- "^" -> Represents the starting text
+- "$" -> Represents the ending text
+- "*" -> Represents the text contained
+
+*Syntax*: tab[attribute<special character>='value']
+
+*Examples*:
+input[class='inputs] -> Only 1 matching noe
+input[class^='inputs] -> Two matching nodes
+input[class='displayed-class'] -> No matching nodes
+input[class$='class] -> One matching node
+input[class*='displayed-class'] -> One matching node
+
+### Finding Children Nodes with CSS selectors
